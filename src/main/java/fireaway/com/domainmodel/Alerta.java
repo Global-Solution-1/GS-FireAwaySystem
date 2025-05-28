@@ -30,4 +30,7 @@ public class Alerta {
 
     @Enumerated(EnumType.STRING)
     private StatusAlerta status;
+
+    @ManyToOne
+    private Monitoramento monitoramento;
 }

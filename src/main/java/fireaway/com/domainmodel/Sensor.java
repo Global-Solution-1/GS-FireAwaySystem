@@ -3,14 +3,17 @@ package fireaway.com.domainmodel;
 
 import fireaway.com.domainmodel.enuns.TipoSensor;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.print.DocFlavor;
 import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter @Setter
 public class Sensor {
 
@@ -24,7 +27,9 @@ public class Sensor {
     private Double latitude;
     private Double longitude;
 
-    private boolean ativo;
+    private String ativo;
+
+
 
     @OneToMany(mappedBy = "sensor")
     private List<Monitoramento> monitoramentos;

@@ -22,7 +22,8 @@ public class Monitoramento {
     private Sensor sensor;
 
     private LocalDateTime dataHora;
-    private String valor;
+    private float valor;
+    private String descricao;
 
     @Override
     public boolean equals(Object obj) {
