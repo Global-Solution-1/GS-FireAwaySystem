@@ -1,10 +1,8 @@
 package fireaway.com.dto;
 
-
+import fireaway.com.domainmodel.Endereco;
 import fireaway.com.domainmodel.Usuario;
-import fireaway.com.domainmodel.enuns.PerfilUsuario;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,9 +11,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @Getter @Setter
 @NoArgsConstructor
-public class UsuarioRequestDto {
+public class UsuarioMoradorDto {
 
     @NotBlank(message = "Fornecer seu nome obrigatório")
     private String nome;
@@ -23,6 +22,7 @@ public class UsuarioRequestDto {
     @NotBlank(message = "O email precisa ser fornecido")
     @Email
     private String email;
+
 
     @NotBlank(message = "Fornecer o CPF é obrigatório")
     @Size(min = 11, max = 11, message = "O CPF precisa ter 11 caracteres")
@@ -32,20 +32,21 @@ public class UsuarioRequestDto {
     @Size(min = 8, max= 12, message = "Sua senha deve ter entre 8 e 12 caracteres")
     private String senha;
 
-
-    @NotNull(message = "O perfil do usuário precisa ser fornecido")
-    private PerfilUsuario perfil;
+    @NotNull(message = "Endereço é obrigatório")
+    @Valid
+    private Endereco endereco;
 
     @NotBlank(message = "O telefone precisa ser fornecido")
     @Size(min = 10, max = 13)
     private String telefone;
 
-    public UsuarioRequestDto(Usuario usuario) {
+    public UsuarioMoradorDto(Usuario usuario) {
         this.nome = usuario.getNome();
         this.email = usuario.getEmail();
         this.cpf = usuario.getCpf();
         this.senha = usuario.getSenha();
-        this.perfil = usuario.getPerfil();
+        this.endereco = usuario.getEndereco();
         this.telefone = usuario.getTelefone();
     }
+
 }

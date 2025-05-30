@@ -1,5 +1,6 @@
 package fireaway.com.security;
 
+import fireaway.com.exceptions.CustomAuthExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -15,9 +16,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig {
 
     private final JwtTokenFilter jwtTokenFilter;
+    private final CustomAuthExceptionHandler customAuthExceptionHandler;
 
-    public SecurityConfig(JwtTokenFilter jwtTokenFilter) {
+    public SecurityConfig(JwtTokenFilter jwtTokenFilter,
+                          CustomAuthExceptionHandler customAuthExceptionHandler) {
         this.jwtTokenFilter = jwtTokenFilter;
+        this.customAuthExceptionHandler = customAuthExceptionHandler;
     }
 
     @Bean
@@ -29,7 +33,13 @@ public class SecurityConfig {
                         .requestMatchers("/v3/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html").permitAll()
+                        .requestMatchers("/alertas/proximos").permitAll()
+                        .requestMatchers("/usuario/cadastro/morador").permitAll()
                         .anyRequest().authenticated()
+                )
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint(customAuthExceptionHandler)
+                        .accessDeniedHandler(customAuthExceptionHandler)
                 )
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
 

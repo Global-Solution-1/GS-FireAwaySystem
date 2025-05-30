@@ -1,6 +1,7 @@
 package fireaway.com.domainmodel;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import fireaway.com.domainmodel.enuns.TipoSensor;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,7 +9,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.print.DocFlavor;
 import java.util.List;
 
 @Entity
@@ -27,10 +27,11 @@ public class Sensor {
     private Double latitude;
     private Double longitude;
 
-    private String ativo;
+    private String status;
 
 
 
     @OneToMany(mappedBy = "sensor")
+    @JsonManagedReference
     private List<Monitoramento> monitoramentos;
 }

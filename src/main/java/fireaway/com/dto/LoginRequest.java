@@ -11,10 +11,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class LoginRequest {
 
-    @NotBlank
+    @NotBlank(message = "O email precisa ser informado")
     @Email
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "Você precisa fornecer uma senha")
     private String senha;
 }

@@ -1,13 +1,18 @@
 package fireaway.com.service;
 
+
 import fireaway.com.domainmodel.Usuario;
+import fireaway.com.domainmodel.enuns.PerfilUsuario;
+import fireaway.com.dto.UsuarioMoradorDto;
 import fireaway.com.dto.UsuarioRequestDto;
+import fireaway.com.dto.UsuarioResponseDto;
+import fireaway.com.exceptions.ResourceNotFoundException;
 import fireaway.com.repository.UsuarioRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class UsuarioService {
@@ -21,40 +26,94 @@ public class UsuarioService {
     }
 
 
-    public Usuario salvarUsuario(UsuarioRequestDto usuarioDto) {
+    public UsuarioResponseDto saveUsuario(UsuarioRequestDto dto) {
         Usuario usuario = new Usuario();
-        usuario.setNome(usuarioDto.getNome());
-        usuario.setEmail(usuarioDto.getEmail());
-        usuario.setSenha(passwordEncoder.encode(usuarioDto.getSenha()));
-        usuario.setPerfil(usuarioDto.getPerfil());
-        return usuarioRepository.save(usuario);
+        usuario.setNome(dto.getNome());
+        usuario.setEmail(dto.getEmail());
+        usuario.setCpf(dto.getCpf());
+        usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
+        usuario.setPerfil(dto.getPerfil());
+        usuario.setTelefone(dto.getTelefone());
+
+        Usuario savedUsuario = usuarioRepository.save(usuario);
+
+        return new UsuarioResponseDto(savedUsuario);
     }
 
 
-    public Optional<Usuario> buscarPorEmail(String email) {
-        return usuarioRepository.findByEmail(email);
+    public void saveMorador(UsuarioMoradorDto dto) {
+        Usuario usuario = new Usuario();
+        usuario.setNome(dto.getNome());
+        usuario.setEmail(dto.getEmail());
+        usuario.setCpf(dto.getCpf());
+        usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
+        usuario.setPerfil(PerfilUsuario.MORADOR);
+        usuario.setEndereco(dto.getEndereco());
+        usuario.setTelefone(dto.getTelefone());
+
+        usuarioRepository.save(usuario);
     }
 
 
-    public boolean validarSenha(String senhaTextoPlano, String senhaCriptografada) {
-        return passwordEncoder.matches(senhaTextoPlano, senhaCriptografada);
+
+    public List<UsuarioResponseDto> listarTodos() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+
+        return usuarios.stream()
+                .map(UsuarioResponseDto::new)
+                .toList();
     }
 
-    // Dentro do UsuarioService já criado
-    public List<Usuario> listarTodos() {
-        return usuarioRepository.findAll();
+
+    public UsuarioResponseDto buscarPorId(Long id) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
+
+        return new UsuarioResponseDto(usuario);
     }
 
-    public Optional<Usuario> buscarPorId(Long id) {
-        return usuarioRepository.findById(id);
+
+    public void deletarPorId(Long id) {
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Usuario", id));
+        usuarioRepository.delete(usuario);
     }
 
-    public boolean deletarPorId(Long id) {
-        if (usuarioRepository.existsById(id)) {
-            usuarioRepository.deleteById(id);
-            return true;
+    public UsuarioResponseDto atualizarMorador(Long id, UsuarioMoradorDto dto) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
+
+        usuario.setNome(dto.getNome());
+        usuario.setEmail(dto.getEmail());
+        usuario.setCpf(dto.getCpf());
+        if (dto.getSenha() != null && !dto.getSenha().isBlank()) {
+            usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
         }
-        return false;
+        usuario.setEndereco(dto.getEndereco());
+        usuario.setTelefone(dto.getTelefone());
+
+        Usuario salvo = usuarioRepository.save(usuario);
+
+        return new UsuarioResponseDto(salvo);
     }
+
+
+    public UsuarioResponseDto atualizarUsuario(Long id, UsuarioRequestDto dto) {
+        Usuario usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
+
+        usuario.setNome(dto.getNome());
+        usuario.setEmail(dto.getEmail());
+        usuario.setCpf(dto.getCpf());
+        if (dto.getSenha() != null && !dto.getSenha().isBlank()) {
+            usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
+        }
+        usuario.setTelefone(dto.getTelefone());
+
+        Usuario salvo = usuarioRepository.save(usuario);
+
+        return new UsuarioResponseDto(salvo);
+    }
+
+
 
 }

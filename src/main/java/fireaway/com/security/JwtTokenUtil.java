@@ -2,9 +2,9 @@ package fireaway.com.security;
 
 import fireaway.com.domainmodel.enuns.PerfilUsuario;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -14,13 +14,15 @@ import java.util.Date;
 @Component
 public class JwtTokenUtil {
 
-    private static final String SECRET_BASE64 = "n0DpN8vpYlZx4K5GlqsfTejKu3CwFmRtuWZ3rJ+wZTT3XY8mEK6S9Fg7b8vtlXcVzNQSTaVq6XcNc8jw7coA9g==";
+
+    @Value("${jwt.secret.base64}")
+    private  String secretBase64;
 
     private SecretKey secretKey;
 
     @PostConstruct
     public void init() {
-        byte[] keyBytes = Base64.getDecoder().decode(SECRET_BASE64);
+        byte[] keyBytes = Base64.getDecoder().decode(secretBase64);
         secretKey = Keys.hmacShaKeyFor(keyBytes);
     }
 

@@ -1,6 +1,7 @@
 package fireaway.com.domainmodel;
 
 
+import fireaway.com.domainmodel.Endereco;
 import fireaway.com.domainmodel.enuns.PerfilUsuario;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -28,6 +29,11 @@ public class Usuario {
 
     @Enumerated(EnumType.STRING)
     private PerfilUsuario perfil;
+
+    @Embedded
+    private Endereco endereco;
+
+    private String telefone;
 
     @Override
     public boolean equals(Object obj) {

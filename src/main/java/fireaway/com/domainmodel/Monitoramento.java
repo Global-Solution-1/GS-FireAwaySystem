@@ -1,6 +1,7 @@
 package fireaway.com.domainmodel;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Monitoramento {
 
     @ManyToOne
     @JoinColumn(name = "sensor_id")
+    @JsonBackReference
     private Sensor sensor;
 
     private LocalDateTime dataHora;
