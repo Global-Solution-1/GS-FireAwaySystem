@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@Tag(name = "Login")
+@Tag(name = "Login", description = "Autenticação necessária para o acesso")
 public class AuthController {
     private final AuthService authService;
 

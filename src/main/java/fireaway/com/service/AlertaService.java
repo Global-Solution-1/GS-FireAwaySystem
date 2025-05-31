@@ -6,6 +6,8 @@ import fireaway.com.dto.AlertaResponseDto;
 import fireaway.com.exceptions.ResourceNotFoundException;
 import fireaway.com.repository.AlertaRepository;
 import fireaway.com.repository.SensorRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,24 +24,19 @@ public class AlertaService {
         this.sensorRepository = sensorRepository;
     }
 
-    public List<AlertaResponseDto> listarTodos() {
-        List<Alerta> alertas = alertaRepository.findAll();
-        return alertas.stream().map(a -> {
-            AlertaResponseDto dto = new AlertaResponseDto();
-            dto.setId(a.getId());
-            dto.setNivel(a.getNivel());
-            dto.setDescricao(a.getDescricao());
-            dto.setLatitude(a.getLatitude());
-            dto.setLongitude(a.getLongitude());
-            dto.setDataHora(a.getDataHora());
-            dto.setStatus(a.getStatus());
+    public List<AlertaResponseDto> listAll() {
+        return alertaRepository.findAll()
+                .stream()
+                .map(AlertaResponseDto::new)
+                .collect(Collectors.toList());
+    }
 
-            return dto;
-        }).collect(Collectors.toList());
+    public Page<AlertaResponseDto> listaAllPaged(Pageable pageable) {
+        return alertaRepository.findAll(pageable).map(AlertaResponseDto::new);
     }
 
 
-    public List<AlertaResponseDto> listarPorProximidade(double userLat, double userLon, double raio) {
+    public List<AlertaResponseDto> listByProximity(double userLat, double userLon, double raio) {
         List<Alerta> todos = alertaRepository.findAll();
 
         return todos.stream()

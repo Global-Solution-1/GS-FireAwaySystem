@@ -22,7 +22,7 @@ public class Endereco {
     private String estado;
 
     @NotBlank(message = "O CEP é obrigatório")
-    @Size(min = 6,max = 6, message = "CEP precisa ter 6 caracteres")
+    @Size(min = 8,max = 8, message = "CEP precisa ter 6 caracteres")
     private String cep;
 
 }

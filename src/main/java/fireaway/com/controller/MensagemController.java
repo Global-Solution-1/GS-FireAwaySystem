@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/mensagem")
-@Tag(name = "Mensagem Controller")
+@Tag(name = "Mensagem Controller", description = "Gerencia as mensagens enviadas e recebidas entre os usuários")
 public class MensagemController {
 
     private final MensagemService mensagemService;

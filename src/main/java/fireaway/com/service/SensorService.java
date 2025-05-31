@@ -5,6 +5,8 @@ import fireaway.com.domainmodel.Sensor;
 import fireaway.com.dto.SensorRequestDto;
 import fireaway.com.exceptions.ResourceNotFoundException;
 import fireaway.com.repository.SensorRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,6 +32,10 @@ public class SensorService {
 
     public List<Sensor> findAll() {
         return sensorRepository.findAll();
+    }
+
+    public Page<Sensor> findAllPaged(Pageable pageable) {
+        return sensorRepository.findAll(pageable);
     }
 
     public Sensor findById(Long id) {

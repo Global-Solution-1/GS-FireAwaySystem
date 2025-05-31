@@ -1,5 +1,6 @@
 package fireaway.com.dto;
 
+import fireaway.com.domainmodel.Alerta;
 import fireaway.com.domainmodel.enuns.NivelAlerta;
 import fireaway.com.domainmodel.enuns.StatusAlerta;
 import lombok.Getter;
@@ -21,5 +22,14 @@ public class AlertaResponseDto {
     private LocalDateTime dataHora;
     private StatusAlerta status;
 
+    public AlertaResponseDto(Alerta alerta) {
+        this.id = alerta.getId();
+        this.nivel = alerta.getNivel();
+        this.descricao = alerta.getDescricao();
+        this.latitude = alerta.getLatitude();
+        this.longitude = alerta.getLongitude();
+        this.dataHora = alerta.getDataHora();
+        this.status = alerta.getStatus();
+    }
 
 }

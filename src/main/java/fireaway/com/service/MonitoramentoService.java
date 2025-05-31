@@ -11,6 +11,8 @@ import fireaway.com.exceptions.ResourceNotFoundException;
 import fireaway.com.repository.AlertaRepository;
 import fireaway.com.repository.MonitoramentoRepository;
 import fireaway.com.repository.SensorRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -107,16 +109,20 @@ public class MonitoramentoService {
     }
 
 
-    public void salvarMonitoramentoEVerificarAlerta(Monitoramento monitoramento) {
+    public void saveMonitoramento(Monitoramento monitoramento) {
         monitoramentoRepository.save(monitoramento);
         processarMonitoramento(monitoramento);
     }
 
-    public List<Monitoramento> listarMonitoramento() {
+    public List<Monitoramento> listAll() {
         return monitoramentoRepository.findAll();
     }
 
-    public Monitoramento buscarMonitoramentoPorId(Long id) {
+    public Page<Monitoramento> listAllPaged(Pageable pageable){
+        return monitoramentoRepository.findAll(pageable);
+    }
+
+    public Monitoramento findById(Long id) {
         return monitoramentoRepository.findById(id).orElse(null);
     }
 

@@ -8,6 +8,8 @@ import fireaway.com.service.AlertaService;
 import fireaway.com.service.GeocodingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -33,15 +35,25 @@ public class AlertaController {
     @Operation(summary = "Lista todos os alertas cadastrados")
     @GetMapping("/todos")
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
-    public ResponseEntity<List<AlertaResponseDto>> listarTodos() {
-        return ResponseEntity.ok(alertaService.listarTodos());
+    public ResponseEntity<List<AlertaResponseDto>> listAll() {
+        return ResponseEntity.ok(alertaService.listAll());
+    }
+
+
+    @Operation(summary = "Lista todos os alertas com paginação")
+    @GetMapping("/pageable")
+    @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
+    public ResponseEntity<Page<AlertaResponseDto>> listAllPaged(Pageable pageable){
+        Page<AlertaResponseDto> alerta = alertaService.listaAllPaged(pageable);
+        return ResponseEntity.ok().body(alerta);
+
     }
 
 
     @Operation(summary = "Lista apenas os alarmes gerados por sensores próximos a localização do Usuário Morador")
     @GetMapping("/proximos")
     @PreAuthorize("hasRole('MORADOR')")
-    public ResponseEntity<?> listarProximos() {
+    public ResponseEntity<?> listProximiy() {
         Usuario usuario = (Usuario) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String cep = usuario.getEndereco().getCep();
 
@@ -54,7 +66,7 @@ public class AlertaController {
 
         double raioKm = 10.0;
 
-        List<AlertaResponseDto> alertas = alertaService.listarPorProximidade(latLon[0], latLon[1], raioKm);
+        List<AlertaResponseDto> alertas = alertaService.listByProximity(latLon[0], latLon[1], raioKm);
 
         if (alertas.isEmpty()) {
             return ResponseEntity.ok("Não há sensores próximos cadastrados ainda.");
@@ -67,7 +79,7 @@ public class AlertaController {
     @Operation(summary = "Busca alerta por ID")
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
     @GetMapping("{id}")
-    public ResponseEntity<Alerta> buscarPorId(@PathVariable Long id) {
+    public ResponseEntity<Alerta> findById(@PathVariable Long id) {
         Alerta alertaId = alertaService.findById(id);
         return ResponseEntity.ok(alertaId);
     }
@@ -82,6 +94,7 @@ public class AlertaController {
     }
 
 
+    @Operation(summary = "Cadastra alerta")
     @PostMapping
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
     public ResponseEntity<Alerta> saveAlerta(@RequestBody AlertaRequestDto alerta){

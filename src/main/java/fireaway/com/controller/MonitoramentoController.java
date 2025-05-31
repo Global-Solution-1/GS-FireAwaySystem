@@ -9,6 +9,8 @@ import fireaway.com.service.MonitoramentoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -20,7 +22,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/monitoramento")
-@Tag(name = "Monitoramento Controller")
+@Tag(name = "Monitoramento Controller", description = "Gerencia os monitoramentos dos sensores cadastrados")
 public class MonitoramentoController {
     private final MonitoramentoService monitoramentoService;
     private final SensorRepository sensorRepository;
@@ -34,7 +36,7 @@ public class MonitoramentoController {
     @Operation(summary = "Cadastro de monitoramentos")
     @PreAuthorize("hasRole('ADMINISTRADOR')")
     @PostMapping
-    public ResponseEntity<String> cadastrarMonitoramento(@RequestBody @Valid MonitoramentoRequestDto dto) {
+    public ResponseEntity<String> saveMonitoramento(@RequestBody @Valid MonitoramentoRequestDto dto) {
 
         Sensor sensor = sensorRepository.findById(dto.getSensorId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sensor não encontrado"));
@@ -47,7 +49,7 @@ public class MonitoramentoController {
         monitoramento.setDataHora(LocalDateTime.now());
 
 
-        monitoramentoService.salvarMonitoramentoEVerificarAlerta(monitoramento);
+        monitoramentoService.saveMonitoramento(monitoramento);
 
         return ResponseEntity.ok("Monitoramento cadastrado e alerta verificado");
     }
@@ -56,18 +58,26 @@ public class MonitoramentoController {
     @Operation(summary = "Listagem de monitoramentos cadastrados")
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
     @GetMapping
-    public ResponseEntity<List<Monitoramento>> listarMonitoramentos() {
-        List<Monitoramento> monitoramentos = monitoramentoService.listarMonitoramento();
+    public ResponseEntity<List<Monitoramento>> listAll() {
+        List<Monitoramento> monitoramentos = monitoramentoService.listAll();
         return ResponseEntity.ok(monitoramentos);
     }
 
+
+    @Operation(summary = "Lista monitoramentos com paginação")
+    @GetMapping("/pageable")
+    @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
+    public ResponseEntity<Page<Monitoramento>> listAllPaged(Pageable pageable) {
+        Page<Monitoramento> monitoramento = monitoramentoService.listAllPaged(pageable);
+        return ResponseEntity.ok().body(monitoramento);
+    }
 
 
     @Operation(summary = "Busca monitoramento por ID")
     @PreAuthorize("hasAnyRole('ADMINISTRADOR', 'SOCORRISTA')")
     @GetMapping("/{id}")
-    public ResponseEntity<Monitoramento> buscarMonitoramentoPorId(@PathVariable Long id) {
-        Monitoramento monitoramento = monitoramentoService.buscarMonitoramentoPorId(id);
+    public ResponseEntity<Monitoramento> findById(@PathVariable Long id) {
+        Monitoramento monitoramento = monitoramentoService.findById(id);
         return ResponseEntity.ok(monitoramento);
     }
 
@@ -76,7 +86,7 @@ public class MonitoramentoController {
     @Operation(summary = "Deleta monitoramento")
     @PreAuthorize("hasRole('ADMINISTRADOR')")
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> excluirMonitoramento(@PathVariable Long id) {
+    public ResponseEntity<String> deleteMonitoramento(@PathVariable Long id) {
         monitoramentoService.deleteMonitoramento(id);
         return ResponseEntity.noContent().build();
     }
@@ -85,7 +95,7 @@ public class MonitoramentoController {
     @Operation(summary = "Atualiza monitoramento")
     @PreAuthorize("hasRole('ADMINISTRADOR')")
     @PutMapping("/{id}")
-    public ResponseEntity<String> atualizarMonitoramento(@PathVariable Long id, @RequestBody @Valid MonitoramentoRequestDto dto) {
+    public ResponseEntity<String> updateMonitoramento(@PathVariable Long id, @RequestBody @Valid MonitoramentoRequestDto dto) {
         monitoramentoService.updateMonitoramento(dto, id);
         return ResponseEntity.ok("Monitoramento atualizado com sucesso");
     }

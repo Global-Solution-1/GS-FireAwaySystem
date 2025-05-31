@@ -7,6 +7,8 @@ import fireaway.com.service.SensorService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/sensor")
-@Tag(name = "Sensor Controller")
+@Tag(name = "Sensor Controller", description = "Gerencia os sensores cadastrados que detectam dados")
 public class SensorController {
 
     private final SensorService sensorService;
@@ -32,6 +34,14 @@ public class SensorController {
     public ResponseEntity<List<Sensor>> getAllSensors() {
         List<Sensor> sensores =  sensorService.findAll();
         return new ResponseEntity<>(sensores, HttpStatus.OK);
+    }
+
+    @Operation(summary = "Lista todos os sensores com paginação")
+    @GetMapping("/pageable")
+    @PreAuthorize("hasRole('ADMINISTRADOR')")
+    public ResponseEntity<Page<Sensor>> getAllSensorsPaged(Pageable pageable) {
+        Page<Sensor> sensor = sensorService.findAllPaged(pageable);
+        return ResponseEntity.ok().body(sensor);
     }
 
 

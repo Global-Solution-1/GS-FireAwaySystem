@@ -8,6 +8,8 @@ import fireaway.com.dto.UsuarioRequestDto;
 import fireaway.com.dto.UsuarioResponseDto;
 import fireaway.com.exceptions.ResourceNotFoundException;
 import fireaway.com.repository.UsuarioRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -56,7 +58,7 @@ public class UsuarioService {
 
 
 
-    public List<UsuarioResponseDto> listarTodos() {
+    public List<UsuarioResponseDto> listAllUsuarios() {
         List<Usuario> usuarios = usuarioRepository.findAll();
 
         return usuarios.stream()
@@ -64,8 +66,11 @@ public class UsuarioService {
                 .toList();
     }
 
+    public Page<UsuarioResponseDto> listAllPaged(Pageable pageable){
+        return usuarioRepository.findAll(pageable).map(UsuarioResponseDto::new);
+    }
 
-    public UsuarioResponseDto buscarPorId(Long id) {
+    public UsuarioResponseDto findById(Long id) {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
 
@@ -73,12 +78,12 @@ public class UsuarioService {
     }
 
 
-    public void deletarPorId(Long id) {
+    public void deleteById(Long id) {
         Usuario usuario = usuarioRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("Usuario", id));
         usuarioRepository.delete(usuario);
     }
 
-    public UsuarioResponseDto atualizarMorador(Long id, UsuarioMoradorDto dto) {
+    public UsuarioResponseDto updateMorador(Long id, UsuarioMoradorDto dto) {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
 
@@ -97,7 +102,7 @@ public class UsuarioService {
     }
 
 
-    public UsuarioResponseDto atualizarUsuario(Long id, UsuarioRequestDto dto) {
+    public UsuarioResponseDto updateUsuario(Long id, UsuarioRequestDto dto) {
         Usuario usuario = usuarioRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário", id));
 
@@ -108,6 +113,7 @@ public class UsuarioService {
             usuario.setSenha(passwordEncoder.encode(dto.getSenha()));
         }
         usuario.setTelefone(dto.getTelefone());
+        usuario.setPerfil(dto.getPerfil());
 
         Usuario salvo = usuarioRepository.save(usuario);
 
