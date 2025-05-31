@@ -15,16 +15,10 @@ WORKDIR /app
 
 COPY --from=build /app/target/fireaway-api.jar app.jar
 
-
-ENV JWT_SECRET;
-ENV DB_USERNAME;
-ENV DB_PASSWORD;
-
-
-EXPOSE 8080
-
-
+# Executa como user sem root
 RUN addgroup -S fireaway && adduser -S fireaway -G fireaway
 USER fireaway
+
+EXPOSE 8080
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
