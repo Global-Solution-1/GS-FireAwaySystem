@@ -3602,3 +3602,2242 @@ https://docs.oracle.com/error-help/db/ora-12899/
 2025-05-31T13:41:44.196-03:00  INFO 7704 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-31T13:41:44.196-03:00  INFO 7704 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
 2025-05-31T13:41:44.259-03:00  INFO 7704 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:04:27.381-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 13932 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:04:27.381-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:04:27.439-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\gabis\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.5.0.24.07\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/gabis/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.5.0.24.07/oraclepki.jar
+2025-05-31T14:04:27.439-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-31T14:04:27.439-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-31T14:04:28.673-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:04:28.769-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:04:29.402-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:04:29.422-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:04:29.422-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:04:29.465-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:04:29.465-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2026 ms
+2025-05-31T14:04:29.655-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:04:29.734-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-31T14:04:29.773-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:04:30.086-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:04:30.117-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:04:30.624-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@3c6c0b7a
+2025-05-31T14:04:30.624-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:04:30.815-03:00  WARN 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:04:30.960-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:04:38.022-03:00 DEBUG 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:04:38.054-03:00 DEBUG 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:04:38.102-03:00 DEBUG 13932 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:04:38.271-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:04:55.220-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:04:55.739-03:00  WARN 13932 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:04:55.760-03:00  WARN 13932 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 5d825d86-5c29-46e8-92b5-834622f02279
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:04:55.767-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:04:56.347-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:04:56.387-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:04:56.387-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:04:56.389-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-31T14:04:56.390-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:04:56.397-03:00  INFO 13932 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 29.469 seconds (process running for 31.804)
+2025-05-31T14:05:00.733-03:00  INFO 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 558 ms
+2025-05-31T14:05:15.785-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:05:15.962-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:05:37.160-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:05:37.201-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:05:37.244-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:05:37.244-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0
+2025-05-31T14:05:37.270-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:05:37.278-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:05:37.320-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:05:37.328-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:05:37.337-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:07:00.535-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:07:00.538-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:07:36.362-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:07:36.365-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:07:36.441-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:07:36.456-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:07:36.466-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:07:36.466-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:07:36.509-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        monitoramento
+        (data_hora, descricao, sensor_id, valor, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-05-31T14:07:36.599-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:07:36.627-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:07:36.627-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        alerta_seq.nextval 
+    from
+        dual
+2025-05-31T14:07:36.642-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:07:36.644-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        alerta
+        (data_hora, descricao, latitude, longitude, nivel, sensor_id, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-31T14:07:36.692-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:07:36.698-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0
+2025-05-31T14:07:36.708-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:07:43.129-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:07:43.131-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:07:43.174-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:07:43.174-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:07:43.183-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:07:43.199-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:07:43.208-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:08:17.070-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:08:17.070-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:09:40.106-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:09:40.106-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:09:40.180-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:09:40.180-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+2025-05-31T14:09:40.196-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:09:40.290-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:09:40.290-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:09:40.298-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        usuario 
+    set
+        cpf=?,
+        email=?,
+        cep=?,
+        cidade=?,
+        estado=?,
+        logradouro=?,
+        nome=?,
+        perfil=?,
+        senha=?,
+        telefone=? 
+    where
+        id=?
+2025-05-31T14:09:47.633-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:09:47.639-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:09:56.973-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:09:56.973-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:10:13.664-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:10:13.667-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:11:23.496-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:11:23.500-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:11:23.526-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:11:23.526-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:11:23.534-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:11:23.541-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:11:23.541-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:11:23.542-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        sensor 
+    set
+        latitude=?,
+        longitude=?,
+        status=?,
+        tipo=? 
+    where
+        id=?
+2025-05-31T14:11:23.559-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:11:52.652-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:11:52.653-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:12:18.810-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:12:18.812-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:12:18.836-03:00  WARN 13932 --- [FireAwaySystem] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fireaway.com.dto.UsuarioResponseDto> fireaway.com.controller.UsuarioController.atualizarCadastroMorador(fireaway.com.dto.UsuarioMoradorDto,org.springframework.security.core.Authentication): [Field error in object 'usuarioMoradorDto' on field 'endereco.cep': rejected value [01001-000]; codes [Size.usuarioMoradorDto.endereco.cep,Size.endereco.cep,Size.cep,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuarioMoradorDto.endereco.cep,endereco.cep]; arguments []; default message [endereco.cep],8,8]; default message [CEP precisa ter 6 caracteres]] ]
+2025-05-31T14:12:24.629-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:12:24.629-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:12:24.661-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:12:24.661-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+2025-05-31T14:12:24.669-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:12:24.778-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:12:24.779-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:12:24.779-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    update
+        usuario 
+    set
+        cpf=?,
+        email=?,
+        cep=?,
+        cidade=?,
+        estado=?,
+        logradouro=?,
+        nome=?,
+        perfil=?,
+        senha=?,
+        telefone=? 
+    where
+        id=?
+2025-05-31T14:12:36.345-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:12:36.345-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:12:38.028-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:12:38.029-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:12:38.037-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:12:38.045-03:00 DEBUG 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:12:38.054-03:00 TRACE 13932 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:12:51.121-03:00  INFO 13932 --- [FireAwaySystem] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T14:12:51.151-03:00  INFO 13932 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T14:12:51.160-03:00  INFO 13932 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:12:51.162-03:00  INFO 13932 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:12:51.204-03:00  INFO 13932 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:13:11.900-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 9728 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:13:11.900-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:13:11.957-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\gabis\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.5.0.24.07\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/gabis/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.5.0.24.07/oraclepki.jar
+2025-05-31T14:13:11.957-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-31T14:13:11.957-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-31T14:13:12.740-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:13:12.786-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:13:13.238-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:13:13.247-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:13:13.247-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:13:13.291-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:13:13.292-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1334 ms
+2025-05-31T14:13:13.489-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:13:13.527-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-31T14:13:13.551-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:13:13.763-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:13:13.792-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:13:14.361-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@18659323
+2025-05-31T14:13:14.363-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:13:14.509-03:00  WARN 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:13:14.602-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:13:21.618-03:00 DEBUG 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:13:21.650-03:00 DEBUG 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:13:21.667-03:00 DEBUG 9728 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:13:21.803-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:13:45.601-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:13:46.089-03:00  WARN 9728 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:13:46.107-03:00  WARN 9728 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3bdbe27c-320d-4b4b-92f3-5e2a6a5b4982
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:13:46.112-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:13:46.633-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:13:46.662-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:13:46.663-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:13:46.664-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-31T14:13:46.665-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:13:46.673-03:00  INFO 9728 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 35.208 seconds (process running for 35.799)
+2025-05-31T14:28:44.485-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:28:44.818-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:28:45.119-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:28:45.119-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:29:04.853-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:29:04.859-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:29:05.443-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:29:05.459-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+2025-05-31T14:29:05.484-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:29:05.584-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:29:05.592-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:29:05.643-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        usuario 
+    set
+        cpf=?,
+        email=?,
+        cep=?,
+        cidade=?,
+        estado=?,
+        logradouro=?,
+        nome=?,
+        perfil=?,
+        senha=?,
+        telefone=? 
+    where
+        id=?
+2025-05-31T14:29:14.169-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:29:14.169-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:29:16.939-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:29:16.939-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:29:16.955-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:29:16.987-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:29:17.002-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:29:36.689-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:29:36.693-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:29:53.207-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:29:53.211-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:29:53.245-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:29:53.245-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:29:53.252-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:29:53.262-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:29:53.270-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:31:38.604-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:31:38.607-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:31:38.646-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:31:38.651-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:31:38.655-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:31:38.663-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:38.663-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:38.671-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    update
+        sensor 
+    set
+        latitude=?,
+        longitude=?,
+        status=?,
+        tipo=? 
+    where
+        id=?
+2025-05-31T14:31:38.720-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:31:46.494-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:31:46.494-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:31:46.526-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:31:46.527-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:31:46.535-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:31:46.536-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:46.551-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        monitoramento
+        (data_hora, descricao, sensor_id, valor, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-05-31T14:31:46.611-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:46.628-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:46.629-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        alerta_seq.nextval 
+    from
+        dual
+2025-05-31T14:31:46.645-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:31:46.653-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    insert 
+    into
+        alerta
+        (data_hora, descricao, latitude, longitude, nivel, sensor_id, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-31T14:31:46.670-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:31:46.670-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0
+2025-05-31T14:31:46.684-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:31:51.556-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:31:51.556-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:31:51.579-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:31:51.579-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:31:51.594-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:31:51.604-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:31:51.613-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:32:17.977-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:32:17.981-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:32:17.999-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:32:18.005-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0
+2025-05-31T14:32:18.014-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:32:40.071-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:32:40.071-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:32:54.093-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:32:54.094-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:32:55.817-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:32:55.817-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:32:55.826-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:32:55.835-03:00 DEBUG 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:32:55.851-03:00 TRACE 9728 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:33:02.952-03:00  INFO 9728 --- [FireAwaySystem] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T14:33:03.035-03:00  INFO 9728 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T14:33:03.037-03:00  INFO 9728 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:33:03.049-03:00  INFO 9728 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:33:03.077-03:00  INFO 9728 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:40:21.838-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 20584 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:40:21.850-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:40:21.894-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\gabis\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.5.0.24.07\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/gabis/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.5.0.24.07/oraclepki.jar
+2025-05-31T14:40:21.894-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-31T14:40:21.894-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-31T14:40:22.683-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:40:22.746-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:40:23.257-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:40:23.273-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:40:23.273-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:40:23.312-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:40:23.312-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1418 ms
+2025-05-31T14:40:23.512-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:40:23.576-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-31T14:40:23.592-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:40:23.848-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:40:23.864-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:40:24.501-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@167d05b2
+2025-05-31T14:40:24.501-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:40:24.693-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:40:24.810-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:40:31.844-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:40:31.869-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:40:31.886-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:40:32.079-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:40:49.077-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:40:49.566-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:40:49.586-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 483c4221-ad3d-40ad-8216-c016aaa07752
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:40:49.590-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:40:50.096-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:40:50.127-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:40:50.127-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:40:50.127-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-31T14:40:50.129-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:40:50.135-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 28.819 seconds (process running for 29.511)
+2025-05-31T14:40:55.280-03:00  INFO 20584 --- [FireAwaySystem] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 482 ms
+2025-05-31T14:41:00.297-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:41:00.416-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:41:47.009-03:00  INFO 20584 --- [FireAwaySystem] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-05-31T14:41:47.013-03:00  INFO 20584 --- [FireAwaySystem] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T14:41:47.057-03:00  INFO 20584 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T14:41:47.064-03:00  INFO 20584 --- [FireAwaySystem] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:41:47.067-03:00  INFO 20584 --- [FireAwaySystem] [Thread-7] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:41:47.117-03:00  INFO 20584 --- [FireAwaySystem] [Thread-7] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:41:47.223-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 20584 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:41:47.223-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:41:47.416-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:41:47.436-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:41:47.583-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:41:47.584-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:41:47.584-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:41:47.604-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:41:47.604-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 379 ms
+2025-05-31T14:41:47.654-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:41:47.658-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:41:47.668-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:41:47.668-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:41:47.811-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@1e1be4c9
+2025-05-31T14:41:47.811-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:41:47.839-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:41:47.862-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:41:54.224-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:41:54.248-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:41:54.265-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:41:54.299-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:42:10.306-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:42:10.427-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'monitoramentoController' defined in file [C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes\fireaway\com\controller\MonitoramentoController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'fireaway.com.service.MonitoramentoService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-05-31T14:42:10.427-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:42:10.427-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:42:10.489-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:42:10.490-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-31T14:42:10.493-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [OJDBC-WORKER-THREAD-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:401)
+ java.base@17.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:903)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1061)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:840)
+2025-05-31T14:42:10.498-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-31T14:42:10.524-03:00 ERROR 20584 --- [FireAwaySystem] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in fireaway.com.controller.MonitoramentoController required a bean of type 'fireaway.com.service.MonitoramentoService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'fireaway.com.service.MonitoramentoService' in your configuration.
+
+2025-05-31T14:42:11.975-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 20584 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:42:11.976-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:42:12.112-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:42:12.125-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:42:12.205-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:42:12.206-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:42:12.206-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:42:12.223-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:42:12.223-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 247 ms
+2025-05-31T14:42:12.265-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:42:12.269-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:42:12.274-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:42:12.275-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:42:12.417-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@51d2d81b
+2025-05-31T14:42:12.417-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:42:12.447-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:42:12.470-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:42:18.687-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:42:18.712-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:42:18.728-03:00 DEBUG 20584 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:42:18.754-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:42:35.014-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:42:35.253-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:42:35.272-03:00  WARN 20584 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 91625697-f72d-47c5-86d3-c6badf586c02
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:42:35.274-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:42:35.575-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:42:35.589-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:42:35.589-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:42:35.591-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-31T14:42:35.591-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:42:35.595-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 23.634 seconds (process running for 134.971)
+2025-05-31T14:42:35.597-03:00  INFO 20584 --- [FireAwaySystem] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-31T14:42:43.507-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:42:43.537-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:42:43.686-03:00  WARN 20584 --- [FireAwaySystem] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-05-31T14:42:50.608-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:42:50.611-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:42:50.660-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-2] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:42:50.675-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:43:06.123-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:43:06.128-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:43:06.386-03:00  WARN 20584 --- [FireAwaySystem] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries]
+2025-05-31T14:43:13.587-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:43:13.593-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:43:14.008-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:14.034-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        sensor_seq.nextval 
+    from
+        dual
+2025-05-31T14:43:14.267-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:14.350-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        sensor
+        (latitude, longitude, status, tipo, id) 
+    values
+        (?, ?, ?, ?, ?)
+2025-05-31T14:43:21.401-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:43:21.401-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:43:21.426-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:43:21.435-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0
+2025-05-31T14:43:21.475-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:43:21.494-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:43:21.527-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:43:21.536-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:43:21.552-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:43:21.559-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.sensor_id,
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    where
+        m1_0.sensor_id=?
+2025-05-31T14:43:58.481-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:43:58.482-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:43:58.739-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:43:58.755-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:43:58.789-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-05-31T14:43:58.789-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:58.797-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        monitoramento
+        (data_hora, descricao, sensor_id, valor, id) 
+    values
+        (?, ?, ?, ?, default)
+2025-05-31T14:43:58.860-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:58.881-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:58.884-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        alerta_seq.nextval 
+    from
+        dual
+2025-05-31T14:43:58.922-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-05-31T14:43:58.925-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        alerta
+        (data_hora, descricao, latitude, longitude, nivel, sensor_id, status, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-05-31T14:43:59.164-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:43:59.172-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0
+2025-05-31T14:43:59.181-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:43:59.186-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findTop3BySensorIdOrderByDataHoraDesc]: This method is not transactional.
+2025-05-31T14:43:59.198-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        m1_0.id,
+        m1_0.data_hora,
+        m1_0.descricao,
+        m1_0.sensor_id,
+        m1_0.valor 
+    from
+        monitoramento m1_0 
+    left join
+        sensor s1_0 
+            on s1_0.id=m1_0.sensor_id 
+    where
+        s1_0.id=? 
+    order by
+        m1_0.data_hora desc 
+    fetch
+        first ? rows only
+2025-05-31T14:44:19.614-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-3] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:44:19.618-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:44:35.585-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:44:35.585-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:44:38.318-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:44:38.322-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.data_hora,
+        a1_0.descricao,
+        a1_0.latitude,
+        a1_0.longitude,
+        a1_0.nivel,
+        a1_0.sensor_id,
+        a1_0.status 
+    from
+        alerta a1_0
+2025-05-31T14:44:38.327-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:44:38.335-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:44:38.352-03:00 DEBUG 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        s1_0.id,
+        s1_0.latitude,
+        s1_0.longitude,
+        s1_0.status,
+        s1_0.tipo 
+    from
+        sensor s1_0 
+    where
+        s1_0.id=?
+2025-05-31T14:44:38.360-03:00 TRACE 20584 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:49:06.833-03:00  INFO 20584 --- [FireAwaySystem] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T14:49:06.873-03:00  INFO 20584 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T14:49:06.876-03:00  INFO 20584 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:49:06.877-03:00  INFO 20584 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:49:07.735-03:00  INFO 20584 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:49:14.191-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 20540 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:49:14.191-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:49:14.269-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\gabis\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.5.0.24.07\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/gabis/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.5.0.24.07/oraclepki.jar
+2025-05-31T14:49:14.269-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-31T14:49:14.269-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-31T14:49:15.116-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:49:15.185-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:49:15.693-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:49:15.693-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:49:15.693-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:49:15.740-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:49:15.746-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1471 ms
+2025-05-31T14:49:15.922-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:49:15.974-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-31T14:49:15.993-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:49:16.215-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:49:16.233-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:49:17.705-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@432158e9
+2025-05-31T14:49:17.708-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:49:17.992-03:00  WARN 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:49:18.335-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:49:25.670-03:00 DEBUG 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:49:25.810-03:00 DEBUG 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:49:25.932-03:00 DEBUG 20540 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:49:26.343-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:49:45.474-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:49:46.105-03:00  WARN 20540 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:49:46.128-03:00  WARN 20540 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ebedae1f-a6ae-48fa-a935-82d5c1382da4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:49:46.136-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:49:46.792-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:49:46.823-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:49:46.824-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:49:46.825-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-05-31T14:49:46.825-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:49:46.835-03:00  INFO 20540 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 33.119 seconds (process running for 33.742)
+2025-05-31T14:51:59.328-03:00  INFO 20540 --- [FireAwaySystem] [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 562 ms
+2025-05-31T14:52:24.761-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:52:25.167-03:00 DEBUG 20540 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:53:06.688-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:53:06.776-03:00 DEBUG 20540 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:53:06.872-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:53:06.885-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll] after exception: org.springframework.data.mapping.PropertyReferenceException: No property '["string"]' found for type 'Alerta'
+2025-05-31T14:53:06.934-03:00  WARN 20540 --- [FireAwaySystem] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.mapping.PropertyReferenceException: No property '["string"]' found for type 'Alerta']
+2025-05-31T14:53:15.248-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:53:15.262-03:00 DEBUG 20540 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:53:15.457-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:53:15.457-03:00 TRACE 20540 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll] after exception: org.springframework.data.mapping.PropertyReferenceException: No property '["DESC"]' found for type 'Alerta'
+2025-05-31T14:53:15.474-03:00  WARN 20540 --- [FireAwaySystem] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.mapping.PropertyReferenceException: No property '["DESC"]' found for type 'Alerta']
+2025-05-31T14:56:35.808-03:00  INFO 20540 --- [FireAwaySystem] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T14:56:35.848-03:00  INFO 20540 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T14:56:35.854-03:00  INFO 20540 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:56:35.857-03:00  INFO 20540 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T14:56:36.534-03:00  INFO 20540 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.
+2025-05-31T14:56:41.651-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Starting AppFireAwayApplication using Java 17.0.12 with PID 1356 (C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem\target\classes started by gabis in C:\Users\gabis\OneDrive - Fiap-Faculdade de Informática e Administração Paulista\Área de Trabalho\FIAP\GS 2025\java\FireAwaySystem)
+2025-05-31T14:56:41.653-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T14:56:41.704-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\gabis\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.5.0.24.07\ojdbc11-23.5.0.24.07.jar referenced one or more files that do not exist: file:/C:/Users/gabis/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.5.0.24.07/oraclepki.jar
+2025-05-31T14:56:41.704-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-31T14:56:41.704-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-31T14:56:42.563-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T14:56:42.618-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 5 JPA repository interfaces.
+2025-05-31T14:56:43.164-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T14:56:43.175-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T14:56:43.176-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-05-31T14:56:43.224-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T14:56:43.224-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1519 ms
+2025-05-31T14:56:43.401-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T14:56:43.449-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-05-31T14:56:43.473-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T14:56:43.702-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T14:56:43.727-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Starting...
+2025-05-31T14:56:44.272-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : SpringBootHikariCP - Added connection oracle.jdbc.driver.T4CConnection@3f29a426
+2025-05-31T14:56:44.273-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Start completed.
+2025-05-31T14:56:44.675-03:00  WARN 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T14:56:45.006-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (SpringBootHikariCP)']
+	Database driver: undefined/unknown
+	Database version: 19.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T14:56:52.426-03:00 DEBUG 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_mensagem(rn_ number(10, 0) not null, data_hora timestamp(6), emissor_id number(19, 0), id number(19, 0), receptor_id number(19, 0), conteudo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:56:52.751-03:00 DEBUG 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_alerta(rn_ number(10, 0) not null, data_hora timestamp(6), id number(19, 0), latitude float(53), longitude float(53), sensor_id number(19, 0), descricao varchar2(255 char), nivel varchar2(255 char), status varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:56:53.061-03:00 DEBUG 1356 --- [FireAwaySystem] [restartedMain] org.hibernate.SQL                        : 
+    create global temporary table HTE_sensor(rn_ number(10, 0) not null, id number(19, 0), latitude float(53), longitude float(53), status varchar2(255 char), tipo varchar2(255 char), primary key (rn_)) 
+        on commit delete rows
+2025-05-31T14:56:53.543-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T14:57:19.286-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T14:57:19.928-03:00  WARN 1356 --- [FireAwaySystem] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T14:57:19.954-03:00  WARN 1356 --- [FireAwaySystem] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 63b339de-1b6f-460e-b37d-bc5978cbb8c7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-31T14:57:19.962-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-05-31T14:57:20.604-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-31T14:57:20.643-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T14:57:20.643-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T14:57:20.644-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-31T14:57:20.645-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T14:57:20.653-03:00  INFO 1356 --- [FireAwaySystem] [restartedMain] fireaway.com.AppFireAwayApplication      : Started AppFireAwayApplication in 39.519 seconds (process running for 40.226)
+2025-05-31T14:57:27.372-03:00  INFO 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 592 ms
+2025-05-31T14:57:36.369-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:57:36.704-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:57:54.900-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T14:57:55.025-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T14:57:55.387-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T14:57:55.401-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-10] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll] after exception: org.springframework.data.mapping.PropertyReferenceException: No property '["string"]' found for type 'Usuario'
+2025-05-31T14:57:55.451-03:00  WARN 1356 --- [FireAwaySystem] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.mapping.PropertyReferenceException: No property '["string"]' found for type 'Usuario']
+2025-05-31T15:03:49.621-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:03:49.623-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:03:49.643-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-4] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:03:49.645-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:02.754-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:02.756-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:03.034-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:03.042-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:03.075-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:03.078-03:00  WARN 1356 --- [FireAwaySystem] [http-nio-8080-exec-8] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-05-31T15:04:22.872-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:22.875-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:22.895-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:22.897-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:23.068-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-6] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:31.855-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:31.857-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:31.878-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:31.879-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:31.899-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        count(u1_0.id) 
+    from
+        usuario u1_0
+2025-05-31T15:04:32.152-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-7] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:41.175-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:41.177-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:41.439-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:41.440-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:41.679-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        count(u1_0.id) 
+    from
+        usuario u1_0
+2025-05-31T15:04:41.975-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-9] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:54.029-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:54.032-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:54.051-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:54.053-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:54.136-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:56.625-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : No need to create transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findByEmail]: This method is not transactional.
+2025-05-31T15:04:56.627-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    where
+        u1_0.email=?
+2025-05-31T15:04:56.646-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:04:56.648-03:00 DEBUG 1356 --- [FireAwaySystem] [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        u1_0.id,
+        u1_0.cpf,
+        u1_0.email,
+        u1_0.cep,
+        u1_0.cidade,
+        u1_0.estado,
+        u1_0.logradouro,
+        u1_0.nome,
+        u1_0.perfil,
+        u1_0.senha,
+        u1_0.telefone 
+    from
+        usuario u1_0 
+    order by
+        u1_0.nome desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-05-31T15:04:56.910-03:00 TRACE 1356 --- [FireAwaySystem] [http-nio-8080-exec-5] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2025-05-31T15:05:05.590-03:00  INFO 1356 --- [FireAwaySystem] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T15:05:05.632-03:00  INFO 1356 --- [FireAwaySystem] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T15:05:05.639-03:00  INFO 1356 --- [FireAwaySystem] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T15:05:05.642-03:00  INFO 1356 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown initiated...
+2025-05-31T15:05:05.902-03:00  INFO 1356 --- [FireAwaySystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : SpringBootHikariCP - Shutdown completed.

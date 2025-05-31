@@ -62,8 +62,9 @@ public class UsuarioController {
     @PreAuthorize("hasRole('ADMINISTRADOR')")
     public ResponseEntity<Page<UsuarioResponseDto>> listUsuariosPaged(Pageable pageable) {
         Page<UsuarioResponseDto> usuario = usuarioService.listAllPaged(pageable);
-        return ResponseEntity.ok().body(usuario);
+        return ResponseEntity.ok(usuario);
     }
+
 
 
     @Operation(summary = "Busca usuário por ID")

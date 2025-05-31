@@ -46,32 +46,56 @@ public class MonitoramentoService {
         TipoSensor tipo = sensor.getTipo();
         float limite = getLimitePorTipo(tipo);
 
-
-        if (monitoramento.getValor() > limite) {
-            gerarAlertaIndividual(sensor, monitoramento);
+        if (tipo == TipoSensor.MOVIMENTO) {
+            if (monitoramento.getValor() == 1.0f) {
+                gerarAlertaIndividual(sensor, monitoramento);
+            }
+        } else {
+            if (monitoramento.getValor() > limite) {
+                gerarAlertaIndividual(sensor, monitoramento);
+            }
         }
-
 
         List<Sensor> todosSensores = sensorRepository.findAll();
 
+        final double RAIO_KM = 1.0;
 
-        final double PROXIMIDADE = 0.01;
         List<Sensor> sensoresProximos = todosSensores.stream()
-                .filter(s -> !s.getId().equals(sensor.getId()) &&
-                        Math.abs(s.getLatitude() - sensor.getLatitude()) < PROXIMIDADE &&
-                        Math.abs(s.getLongitude() - sensor.getLongitude()) < PROXIMIDADE)
+                .filter(s -> !s.getId().equals(sensor.getId()) && estaProximo(sensor, s, RAIO_KM))
                 .toList();
-
 
         long sensoresEmRisco = sensoresProximos.stream().filter(s -> {
             List<Monitoramento> ultimos = monitoramentoRepository.findTop3BySensorIdOrderByDataHoraDesc(s.getId());
-            return ultimos.stream().anyMatch(m -> m.getValor() > getLimitePorTipo(s.getTipo()));
+            return ultimos.stream().anyMatch(m -> {
+                if (s.getTipo() == TipoSensor.MOVIMENTO) {
+                    return m.getValor() == 1.0f;
+                } else {
+                    return m.getValor() > getLimitePorTipo(s.getTipo());
+                }
+            });
         }).count();
 
         if (sensoresEmRisco >= 2) {
             gerarAlertaColetivo(sensor, sensoresProximos);
         }
     }
+
+    private boolean estaProximo(Sensor s1, Sensor s2, double raioKm) {
+        double distancia = distancia(s1.getLatitude(), s1.getLongitude(), s2.getLatitude(), s2.getLongitude());
+        return distancia <= raioKm;
+    }
+
+    private double distancia(double lat1, double lon1, double lat2, double lon2) {
+        double R = 6371;
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat/2) * Math.sin(dLat/2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(dLon/2) * Math.sin(dLon/2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c;
+    }
+
 
     private void gerarAlertaIndividual(Sensor sensor, Monitoramento monitoramento) {
         Alerta alerta = new Alerta();
