@@ -1,4 +1,4 @@
-
+# Stage 1: Build da aplicação com Maven
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 WORKDIR /app
@@ -8,15 +8,15 @@ COPY src ./src
 
 RUN mvn clean package -DskipTests
 
-
-FROM eclipse-temurin:17-jdk-alpine
+# Stage 2: Imagem final só com JRE e o jar
+FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
 COPY --from=build /app/target/fireaway-api.jar app.jar
 
 # Executa como user sem root
-RUN addgroup -S fireaway && adduser -S fireaway -G fireaway
+RUN addgroup --system fireaway && adduser --system --ingroup fireaway fireaway
 USER fireaway
 
 EXPOSE 8080
