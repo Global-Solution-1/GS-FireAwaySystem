@@ -1,4 +1,23 @@
 # 🚨 FireAway API
+
+## Índice
+
+1. [Tecnologias Utilizadas](#-tecnologias-utilizadas)  
+2. [Entidades](#entidades)  
+3. [Segurança](#-segurança)  
+4. [Integração com Nominatim API](#-integração-com-nominatim-api)  
+5. [Perfis de Usuário](#-perfis-de-usuário)  
+6. [Como Executar o Projeto](#▶️-como-executar-o-projeto)  
+7. [Configuração do JWT Secret](#✅-configuração-do-jwt-secret)  
+8. [Configuração das Credenciais do Banco de Dados](#✅-configuração-das-credenciais-do-banco-de-dados)  
+9. [Comandos para Executar a API](#✅-comandos-para-executar-a-api)  
+10. [Dockerfile e docker-compose](#dockerfile-e-docker-compose)  
+11. [Teste do Ambiente Docker](#como-realizar-o-teste)  
+12. [Grupo Desenvolvedor](#-grupo-desenvolvedor)
+
+---
+
+# Sistema FireAway
 FireAway API é uma aplicação backend RESTful desenvolvida em Java com Spring Boot, responsável pela gestão de usuários, autenticação via JWT, 
 controle de alertas ambientais (com localização via latitude e longitude) e integração com sensores. Seu desenvolvimento se deve a estruturação
 do funcionamento do sistema FireAway.
@@ -120,6 +139,32 @@ http://localhost:8080
 📖 http://localhost:8080/swagger-ui.html
 ou
 📖 http://localhost:8080/swagger-ui/index.html
+
+
+## Dockerfile e docker-compose
+
+A aplicação conta com um Dockerfile para criação de imagem e um arquivo "docker-compose.yml" para criação de imagem e container
+da API e do banco de dados Oracle.
+
+Dentro do docker compose, certifique-se que o código do JWT é o mesmo rodando na aplicação:
+```bash
+- JWT_SECRET={codigoBase64}
+```
+
+
+### Como realizar o teste?
+Execute o comando no terminal:
+```bash
+docker compose up -d
+```
+
+Dentro do container do banco Oracle, crie um usuário com permissões para inserção de dados:
+```bash
+CREATE USER [nome-usuario] IDENTIFIED BY [senha-usuario];
+GRANT CONNECT, RESOURCE TO [nome-usuario];
+ALTER USER [nome-usuario] QUOTA UNLIMITED ON USERS;
+exit;
+```
 
 
 ## 👥 Grupo Desenvolvedor
