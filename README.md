@@ -147,9 +147,14 @@ da API e do banco de dados Oracle.
 
 Dentro do docker compose, certifique-se que o código do JWT é o mesmo rodando na aplicação:
 ```bash
-- JWT_SECRET={codigoBase64}
+JWT_SECRET={codigoBase64}
 ```
 
+Para configuração do volume, verifique se você possui esse diretório criado na sua máquina:
+```bash
+C:/oracle-data:/opt/oracle/oradata
+```
+⚠️ Observação: caso você não queira configurar um volume, apenas retire do código
 
 - Como realizar o teste?
 Execute o comando no terminal:
