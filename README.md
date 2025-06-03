@@ -87,6 +87,15 @@ jwt.secret=seu_token_secreto
 ```
 ⚠️ IMPORTANTE: sem o JWT_SECRET, a autenticação não funcionará!
 
+## ✅ Configuração do JWT Secret
+Configure as credenciais do banco de dados para o funcionamento da aplicação:
+
+```bash
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+```
+
 ## ✅ Comandos para executar a API
 
 1️⃣ Clonar o repositório:
