@@ -43,6 +43,8 @@ do funcionamento do sistema FireAway.
 - 🚨 Alerta
 - 💬 Mensagem
 
+---
+
 ## 🔒 Segurança
 
 - Autenticação via JWT.
@@ -50,12 +52,15 @@ do funcionamento do sistema FireAway.
 - Tratamento de exceções: CustomAuthExceptionHandler para respostas padronizadas de erro (401 e 403).
 - Controle de acesso via @PreAuthorize com perfis de usuário.
 
+---
+
 ## 📡 Integração com Nominatim API
 Utilizada para converter CEP em latitude e longitude, integrando dados geográficos aos alertas e monitoramentos. Responsável por auxiliar o método 
 de listagem dos alertas próximos ao usuário.
 URL da API:
 🌐 https://nominatim.openstreetmap.org/search
 
+---
 
 ## 👥 Perfis de Usuário
 
@@ -83,6 +88,7 @@ Consultar mensagens recebidas (GET /mensagem/recebidas)
 - Descrição: Usuário com todas as permissões de funcionalidade. 
 - Permissões: Responsável pelo gerenciamento completo, incluindo cadastro entidades e monitoramento completo.
 
+---
 
 ## ▶️ Como Executar o Projeto
 - Java 17 instalado
@@ -91,6 +97,7 @@ Consultar mensagens recebidas (GET /mensagem/recebidas)
 - Variável de ambiente para o JWT Secret configurada (JWT_SECRET)
 - Dependências resolvidas (mvn clean install)
 
+---
 
 ## ✅ Configuração do JWT Secret
 
@@ -105,6 +112,8 @@ jwt.secret=seu_token_secreto
 ```
 ⚠️ IMPORTANTE: sem o JWT_SECRET, a autenticação não funcionará!
 
+---
+
 ## ✅ Configuração do JWT Secret
 Configure as credenciais do banco de dados para o funcionamento da aplicação:
 
@@ -113,6 +122,8 @@ spring.datasource.url=${SPRING_DATASOURCE_URL}
 spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
 spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
 ```
+
+---
 
 ## ✅ Comandos para executar a API
 
@@ -139,6 +150,7 @@ http://localhost:8080
 ou
 📖 http://localhost:8080/swagger-ui/index.html
 
+---
 
 ## Dockerfile e docker-compose
 
@@ -156,6 +168,7 @@ C:/oracle-data:/opt/oracle/oradata
 ```
 ⚠️ Observação: caso você não queira configurar um volume, apenas retire do código
 
+
 - Como realizar o teste?
 Execute o comando no terminal:
 ```bash
@@ -170,6 +183,7 @@ ALTER USER [nome-usuario] QUOTA UNLIMITED ON USERS;
 exit;
 ```
 
+---
 
 ## 👥 Grupo Desenvolvedor
 - Gabriela de Sousa Reis - RM558830
