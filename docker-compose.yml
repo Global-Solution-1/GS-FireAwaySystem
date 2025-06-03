@@ -30,7 +30,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:oracle:thin:@//oracle-db:1521/XE
       - SPRING_DATASOURCE_USERNAME=fireaway
       - SPRING_DATASOURCE_PASSWORD=Fireaway123
-      - JWT_SECRET=n0DpN8vpYlZx4K5GlqsfTejKu3CwFmRtuWZ3rJ+wZTT3XY8mEK6S9Fg7b8vtlXcVzNQSTaVq6XcNc8jw7coA9g==
+      - JWT_SECRET={codigoBase64}
     restart: always
     networks:
       - fireaway-network
@@ -40,4 +40,5 @@ volumes:
   oracle-data:
 
 networks:
+
   fireaway-network:
