@@ -12,8 +12,7 @@
 8. [Configuração das Credenciais do Banco de Dados](#✅-configuração-das-credenciais-do-banco-de-dados)  
 9. [Comandos para Executar a API](#✅-comandos-para-executar-a-api)  
 10. [Dockerfile e docker-compose](#dockerfile-e-docker-compose)  
-11. [Teste do Ambiente Docker](#como-realizar-o-teste)  
-12. [Grupo Desenvolvedor](#-grupo-desenvolvedor)
+11. [Grupo Desenvolvedor](#-grupo-desenvolvedor)
 
 ---
 
@@ -152,7 +151,7 @@ Dentro do docker compose, certifique-se que o código do JWT é o mesmo rodando 
 ```
 
 
-### Como realizar o teste?
+- Como realizar o teste?
 Execute o comando no terminal:
 ```bash
 docker compose up -d
