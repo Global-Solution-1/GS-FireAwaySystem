@@ -1,4 +1,22 @@
 # 🚨 FireAway API
+
+## Índice
+
+1. [Tecnologias Utilizadas](#-tecnologias-utilizadas)  
+2. [Entidades](#entidades)  
+3. [Segurança](#-segurança)  
+4. [Integração com Nominatim API](#-integração-com-nominatim-api)  
+5. [Perfis de Usuário](#-perfis-de-usuário)  
+6. [Como Executar o Projeto](#▶️-como-executar-o-projeto)  
+7. [Configuração do JWT Secret](#✅-configuração-do-jwt-secret)  
+8. [Configuração das Credenciais do Banco de Dados](#✅-configuração-das-credenciais-do-banco-de-dados)  
+9. [Comandos para Executar a API](#✅-comandos-para-executar-a-api)  
+10. [Dockerfile e docker-compose](#dockerfile-e-docker-compose)  
+11. [Grupo Desenvolvedor](#-grupo-desenvolvedor)
+
+---
+
+# Sistema FireAway
 FireAway API é uma aplicação backend RESTful desenvolvida em Java com Spring Boot, responsável pela gestão de usuários, autenticação via JWT, 
 controle de alertas ambientais (com localização via latitude e longitude) e integração com sensores. Seu desenvolvimento se deve a estruturação
 do funcionamento do sistema FireAway.
@@ -25,6 +43,8 @@ do funcionamento do sistema FireAway.
 - 🚨 Alerta
 - 💬 Mensagem
 
+---
+
 ## 🔒 Segurança
 
 - Autenticação via JWT.
@@ -32,12 +52,15 @@ do funcionamento do sistema FireAway.
 - Tratamento de exceções: CustomAuthExceptionHandler para respostas padronizadas de erro (401 e 403).
 - Controle de acesso via @PreAuthorize com perfis de usuário.
 
+---
+
 ## 📡 Integração com Nominatim API
 Utilizada para converter CEP em latitude e longitude, integrando dados geográficos aos alertas e monitoramentos. Responsável por auxiliar o método 
 de listagem dos alertas próximos ao usuário.
 URL da API:
 🌐 https://nominatim.openstreetmap.org/search
 
+---
 
 ## 👥 Perfis de Usuário
 
@@ -65,6 +88,7 @@ Consultar mensagens recebidas (GET /mensagem/recebidas)
 - Descrição: Usuário com todas as permissões de funcionalidade. 
 - Permissões: Responsável pelo gerenciamento completo, incluindo cadastro entidades e monitoramento completo.
 
+---
 
 ## ▶️ Como Executar o Projeto
 - Java 17 instalado
@@ -73,6 +97,7 @@ Consultar mensagens recebidas (GET /mensagem/recebidas)
 - Variável de ambiente para o JWT Secret configurada (JWT_SECRET)
 - Dependências resolvidas (mvn clean install)
 
+---
 
 ## ✅ Configuração do JWT Secret
 
@@ -86,6 +111,19 @@ Ou, se preferir, adicione no application.properties:
 jwt.secret=seu_token_secreto
 ```
 ⚠️ IMPORTANTE: sem o JWT_SECRET, a autenticação não funcionará!
+
+---
+
+## ✅ Configuração do JWT Secret
+Configure as credenciais do banco de dados para o funcionamento da aplicação:
+
+```bash
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${SPRING_DATASOURCE_USERNAME}
+spring.datasource.password=${SPRING_DATASOURCE_PASSWORD}
+```
+
+---
 
 ## ✅ Comandos para executar a API
 
@@ -112,6 +150,40 @@ http://localhost:8080
 ou
 📖 http://localhost:8080/swagger-ui/index.html
 
+---
+
+## Dockerfile e docker-compose
+
+A aplicação conta com um Dockerfile para criação de imagem e um arquivo "docker-compose.yml" para criação de imagem e container
+da API e do banco de dados Oracle.
+
+Dentro do docker compose, certifique-se que o código do JWT é o mesmo rodando na aplicação:
+```bash
+JWT_SECRET={codigoBase64}
+```
+
+Para configuração do volume, verifique se você possui esse diretório criado na sua máquina:
+```bash
+C:/oracle-data:/opt/oracle/oradata
+```
+⚠️ Observação: caso você não queira configurar um volume, apenas retire do código
+
+
+- Como realizar o teste?
+Execute o comando no terminal:
+```bash
+docker compose up -d
+```
+
+Dentro do container do banco Oracle, crie um usuário com permissões para inserção de dados:
+```bash
+CREATE USER [nome-usuario] IDENTIFIED BY [senha-usuario];
+GRANT CONNECT, RESOURCE TO [nome-usuario];
+ALTER USER [nome-usuario] QUOTA UNLIMITED ON USERS;
+exit;
+```
+
+---
 
 ## 👥 Grupo Desenvolvedor
 - Gabriela de Sousa Reis - RM558830
