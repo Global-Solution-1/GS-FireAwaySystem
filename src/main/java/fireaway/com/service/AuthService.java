@@ -3,6 +3,7 @@ package fireaway.com.service;
 
 import fireaway.com.domainmodel.Usuario;
 import fireaway.com.dto.LoginRequest;
+import fireaway.com.dto.LoginResponseDto;
 import fireaway.com.repository.UsuarioRepository;
 import fireaway.com.security.JwtTokenUtil;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -21,7 +22,7 @@ public class AuthService {
         this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
-    public String autenticar(LoginRequest loginRequest) throws Exception {
+    public LoginResponseDto autenticar(LoginRequest loginRequest) throws Exception {
         Usuario usuario = usuarioRepository.findByEmail(loginRequest.getEmail())
                 .orElseThrow(() -> new Exception("Usuário não encontrado"));
 
@@ -29,6 +30,10 @@ public class AuthService {
             throw new Exception("Senha incorreta");
         }
 
-        return jwtTokenUtil.generateToken(usuario.getEmail(), usuario.getPerfil());
+        String token = jwtTokenUtil.generateToken(usuario.getEmail(), usuario.getPerfil());
+
+        return new LoginResponseDto(token, usuario.getPerfil(), usuario.getNome());
     }
+
+
 }

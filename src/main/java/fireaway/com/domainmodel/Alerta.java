@@ -1,6 +1,7 @@
 package fireaway.com.domainmodel;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import fireaway.com.domainmodel.enuns.NivelAlerta;
 import fireaway.com.domainmodel.enuns.StatusAlerta;
 import jakarta.persistence.*;
@@ -26,7 +27,9 @@ public class Alerta {
     private Double latitude;
     private Double longitude;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "America/Sao_Paulo")
     private LocalDateTime dataHora;
+
 
     @Enumerated(EnumType.STRING)
     private StatusAlerta status;

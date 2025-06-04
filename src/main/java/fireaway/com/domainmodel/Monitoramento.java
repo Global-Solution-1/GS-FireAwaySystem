@@ -2,6 +2,8 @@ package fireaway.com.domainmodel;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,10 +22,13 @@ public class Monitoramento {
 
     @ManyToOne
     @JoinColumn(name = "sensor_id")
-    @JsonBackReference
+    @JsonIgnoreProperties({"monitoramentos"})
     private Sensor sensor;
 
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "America/Sao_Paulo")
     private LocalDateTime dataHora;
+
     private float valor;
     private String descricao;
 

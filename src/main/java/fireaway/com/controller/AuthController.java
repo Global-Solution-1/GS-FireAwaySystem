@@ -26,10 +26,11 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
         try {
-            String token = authService.autenticar(loginRequest);
-            return ResponseEntity.ok(new LoginResponseDto(token));
+            LoginResponseDto loginResponse = authService.autenticar(loginRequest);
+            return ResponseEntity.ok(loginResponse);
         } catch (Exception e) {
             return ResponseEntity.status(401).body(e.getMessage());
         }
     }
+
 }
