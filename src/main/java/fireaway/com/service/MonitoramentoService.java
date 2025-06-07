@@ -26,9 +26,8 @@ public class MonitoramentoService {
     private final AlertaRepository alertaRepository;
     private final SensorRepository sensorRepository;
 
-
     private final float LIMITE_TEMPERATURA = 50.0f;
-    private final float LIMITE_UMIDADE = 80.0f;
+    private final float LIMITE_UMIDADE = 50.0f;
     private final float LIMITE_FUMACA = 5.0f;
     private final float LIMITE_MOVIMENTO = 1.0f;
 
@@ -50,6 +49,10 @@ public class MonitoramentoService {
             if (monitoramento.getValor() == 1.0f) {
                 gerarAlertaIndividual(sensor, monitoramento);
             }
+        } else if (tipo == TipoSensor.UMIDADE) {
+            if (monitoramento.getValor() < limite) {
+                gerarAlertaIndividual(sensor, monitoramento);
+            }
         } else {
             if (monitoramento.getValor() > limite) {
                 gerarAlertaIndividual(sensor, monitoramento);
@@ -57,7 +60,6 @@ public class MonitoramentoService {
         }
 
         List<Sensor> todosSensores = sensorRepository.findAll();
-
         final double RAIO_KM = 1.0;
 
         List<Sensor> sensoresProximos = todosSensores.stream()
@@ -69,6 +71,8 @@ public class MonitoramentoService {
             return ultimos.stream().anyMatch(m -> {
                 if (s.getTipo() == TipoSensor.MOVIMENTO) {
                     return m.getValor() == 1.0f;
+                } else if (s.getTipo() == TipoSensor.UMIDADE) {
+                    return m.getValor() < getLimitePorTipo(s.getTipo());
                 } else {
                     return m.getValor() > getLimitePorTipo(s.getTipo());
                 }
@@ -89,13 +93,12 @@ public class MonitoramentoService {
         double R = 6371;
         double dLat = Math.toRadians(lat2 - lat1);
         double dLon = Math.toRadians(lon2 - lon1);
-        double a = Math.sin(dLat/2) * Math.sin(dLat/2)
+        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
                 + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
-                * Math.sin(dLon/2) * Math.sin(dLon/2);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return R * c;
     }
-
 
     private void gerarAlertaIndividual(Sensor sensor, Monitoramento monitoramento) {
         Alerta alerta = new Alerta();
@@ -125,13 +128,12 @@ public class MonitoramentoService {
 
     private float getLimitePorTipo(TipoSensor tipo) {
         return switch (tipo) {
-            case TEMPERATURA -> 50.0f;
-            case UMIDADE -> 80.0f;
-            case FUMACA -> 5.0f;
-            case MOVIMENTO -> 1.0f;
+            case TEMPERATURA -> LIMITE_TEMPERATURA;
+            case UMIDADE -> LIMITE_UMIDADE;
+            case FUMACA -> LIMITE_FUMACA;
+            case MOVIMENTO -> LIMITE_MOVIMENTO;
         };
     }
-
 
     public void saveMonitoramento(Monitoramento monitoramento) {
         monitoramentoRepository.save(monitoramento);
@@ -142,7 +144,7 @@ public class MonitoramentoService {
         return monitoramentoRepository.findAll();
     }
 
-    public Page<Monitoramento> listAllPaged(Pageable pageable){
+    public Page<Monitoramento> listAllPaged(Pageable pageable) {
         return monitoramentoRepository.findAll(pageable);
     }
 
@@ -164,14 +166,8 @@ public class MonitoramentoService {
             monitoramento.setDataHora(monitoramento.getDataHora());
 
             return monitoramentoRepository.save(monitoramento);
-        }else{
+        } else {
             throw new ResourceNotFoundException("Monitoramento", id);
         }
     }
-
-
-
-
 }
-
-
