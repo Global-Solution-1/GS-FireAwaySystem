@@ -186,7 +186,7 @@ exit;
 
 - Scripts de requisições Teste
 
-- Criação inicial de um usuário Administrador no container do banco:
+Criação inicial de um usuário Administrador no container do banco:
 ```bash
 INSERT INTO usuario (nome, email, cpf, senha, perfil, telefone) VALUES
 ('Jade', 'jade@fireaway.com', '44954401879', '$2a$12$FdnMsM92MUcTm5cJNuvco.A2B2qqCM1fw94lZUAePi5pR3N6ZJOzS', 'ADMINISTRADOR', '11945350242');
@@ -194,7 +194,7 @@ COMMIT;
 ```
 ⚠️ Para permissão de realização de outros métodos, é necessário se logar com o usuário cadastrado anteriormente.
 
-- Exemplos de JSON usados para requisições POST:
+Exemplos de JSON usados para requisições POST:
 Cadastro de usuário:
 ```bash
 {
