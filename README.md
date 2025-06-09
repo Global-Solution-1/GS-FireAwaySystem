@@ -152,7 +152,7 @@ ou
 
 ---
 
-## Dockerfile e docker-compose
+## 🔧☁️ DevOps & Cloud Computing
 
 A aplicação conta com um Dockerfile para criação de imagem e um arquivo "docker-compose.yml" para criação de imagem e container
 da API e do banco de dados Oracle.
@@ -181,6 +181,74 @@ CREATE USER [nome-usuario] IDENTIFIED BY [senha-usuario];
 GRANT CONNECT, RESOURCE TO [nome-usuario];
 ALTER USER [nome-usuario] QUOTA UNLIMITED ON USERS;
 exit;
+```
+
+- Scripts de requisições Teste
+
+- Criação inicial de um usuário Administrador no container do banco:
+```bash
+INSERT INTO usuario (nome, email, cpf, senha, perfil, telefone) VALUES
+('Jade', 'jade@fireaway.com', '44954401879', '$2a$12$FdnMsM92MUcTm5cJNuvco.A2B2qqCM1fw94lZUAePi5pR3N6ZJOzS', 'ADMINISTRADOR', '11945350242');
+COMMIT;
+```
+⚠️ Para permissão de realização de outros métodos, é necessário se logar com o usuário cadastrado anteriormente.
+
+- Exemplos de JSON usados para requisições POST:
+Cadastro de usuário:
+```bash
+{
+  "nome": "Gabriela",
+  "email": "gabi@email.com",
+  "cpf": "78541263256",
+  "senha": "Marleygabi",
+  "perfil": "SOCORRISTA",
+  "telefone": "11987456321"
+
+}
+```
+
+Cadastro de Sensor:
+```bash
+{
+  "tipo": "TEMPERATURA",
+  "latitude": "-255000.1",
+  "longitude": "-85695.2",
+  "status": "Sensor ativo"
+}
+```
+
+Cadastro de Monitoramento:
+```bash
+{
+  "sensorId": "1" {id_de_sensor_existente},
+  "valor": "60.1",
+  "descricao": "Monitoramento ativo"
+}
+```
+
+Cadastro de usuário Morador:
+```bash
+{
+  "nome": "Janaina",
+  "email": "jana@email.com",
+  "cpf": "45214563258",
+  "senha": "janaina456",
+  "endereco":{
+      "logradouro": "Rua Pinheiros",
+      "cidade": "sp",
+      "estado": "sp",
+      "cep": "01001-000",
+  },
+  "telefone": "1194563256"
+}
+```
+
+Envio de mensagem:
+```bash
+{
+  "emailReceptor": "jade@fireaway.com" {email_de_usuarios_existentes},
+  "conteudo": "Olá, administrador! Gostaria de saber mais sobre as funcionalidades do sistema"
+}
 ```
 
 ---
