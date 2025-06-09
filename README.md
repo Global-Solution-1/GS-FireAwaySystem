@@ -11,8 +11,9 @@
 7. [Configuração do JWT Secret](#✅-configuração-do-jwt-secret)  
 8. [Configuração das Credenciais do Banco de Dados](#✅-configuração-das-credenciais-do-banco-de-dados)  
 9. [Comandos para Executar a API](#✅-comandos-para-executar-a-api)  
-10. [DevOps & Cloud Computing](#devops-&-docker-computing)  
+10. [DevOps & Cloud Computing](#-devops--cloud-computing)  
 11. [Grupo Desenvolvedor](#-grupo-desenvolvedor)
+
 
 ---
 
